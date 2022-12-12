@@ -44,6 +44,8 @@ import p4des1Bl from "./assets/p4des1Bl.png";
 import p4des1De from "./assets/p4des1De.png";
 import p4des1Ur from "./assets/p4des1Ur.png";
 import p5des1Bl from "./assets/p5des1Bl.png";
+import p5des1De from "./assets/p5des1De.png";
+import p5des1Ur from "./assets/p5des1Ur.png";
 
 import { Animated } from "react-animated-css";
 import Tab from "react-bootstrap/Tab";
@@ -80,7 +82,8 @@ export default function App() {
   const [p4des1desertStatus, setP4des1desertStatus] = useState(false);
   const [p4des1urbanStatus, setP4des1urbanStatus] = useState(false);
   const [p5des1woodStatus, setP5des1woodStatus] = useState(false);
-
+  const [p5des1desertStatus, setP5des1desertStatus] = useState(false);
+  const [p5des1urbanStatus, setP5des1urbanStatus] = useState(false);
   const [woodP2, setWoodP2] = useState(false);
   const [woodP3, setWoodP3] = useState(false);
   const [desertP1, setDesertP1] = useState(false);
@@ -105,6 +108,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShow1(false);
     setShow3(false);
@@ -126,6 +131,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShow1(false);
     setShow3(false);
@@ -142,6 +149,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShow3(true);
     setShow1(false);
@@ -170,6 +179,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType2(false);
   };
@@ -184,6 +195,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+  setP5des1urbanStatus(false);
+  setP5des1desertStatus(false);
   };
 
   const setdes1 = () => {
@@ -198,6 +211,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShow1(false);
     setShow4(false);
@@ -220,6 +235,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShow1(false);
     setShow4(false);
@@ -242,6 +259,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -261,6 +280,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(true);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -281,6 +302,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -301,6 +324,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -327,6 +352,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -345,6 +372,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -384,6 +413,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -422,6 +453,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -460,6 +493,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+  setP5des1urbanStatus(false);
+  setP5des1desertStatus(false);
 
     setP3des3urbanStatus(false);
     setPenType1(true);
@@ -499,7 +534,9 @@ export default function App() {
     setP3des3urbanStatus(false);
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
-    setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+  setP5des1urbanStatus(false);
+  setP5des1woodStatus(false);
     setPenType1(false);
     setP1_Des1(false);
     setWoodP1(false);
@@ -524,7 +561,89 @@ export default function App() {
   };
 
   const setP5des1Wood = () => {
-    setP5des1woodStatus(true)
+    setP5des1woodStatus(true);
+    setP4des1woodStatus(false);
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(false);
+    setP1des1urbanStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+    setP5des1desertStatus(false);
+  setP5des1urbanStatus(false);
+  setP3des3woodStatus(false);
+    // setP3des3desertStatus(false);
+    // setP3des3urbanStatus(false);
+    // setP4des1desertStatus(false);
+    // setP4des1urbanStatus(false);
+    setPenType1(false);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP5des1Desert = () => {
+    setP5des1desertStatus(true);
+    setP5des1woodStatus(false);
+    setP4des1woodStatus(false);
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(false);
+    setP1des1urbanStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+  setP5des1urbanStatus(false);
+  setP3des3woodStatus(false);
+    // setP3des3desertStatus(false);
+    // setP3des3urbanStatus(false);
+    // setP4des1desertStatus(false);
+    // setP4des1urbanStatus(false);
+    setPenType1(false);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP5des1Urabn = () => {
+    setP5des1urbanStatus(true);
+    setP5des1desertStatus(false);
+    setP5des1woodStatus(false);
     setP4des1woodStatus(false);
     setP1des1wood(false);
     setP1des1woodStatus(false);
@@ -575,6 +694,8 @@ export default function App() {
     setP3des3urbanStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(false);
     setP1_Des1(false);
@@ -614,6 +735,8 @@ export default function App() {
     setP3des3desertStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(false);
     setP1_Des1(false);
@@ -652,6 +775,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -720,6 +845,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     // setP3des3woodStatus(true);
 
@@ -798,6 +925,8 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -832,6 +961,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP4des1urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setP1des1urbanStatus(false);
     setPenType1(true);
@@ -865,7 +996,9 @@ export default function App() {
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
     setP4des1woodStatus(false);
+    setP5des1desertStatus(false);
     setP5des1woodStatus(false);
+    setP5des1urbanStatus(false);
 
     setPenType1(true);
     setP1_Des1(false);
@@ -907,7 +1040,10 @@ export default function App() {
     setP4des1woodStatus(false);
     setP4des1desertStatus(false);
     setP4des1urbanStatus(false);
-    setP3des3urbanStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1woodStatus(false);
+  setP5des1urbanStatus(false);
+  setP3des3urbanStatus(false);
     setShowP1(false);
   };
 
@@ -936,6 +1072,8 @@ export default function App() {
     setP4des1urbanStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -960,6 +1098,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -984,7 +1124,9 @@ export default function App() {
     setP4des1urbanStatus(false);
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
+    setP5des1desertStatus(false);
     setP5des1woodStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -1014,6 +1156,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -1039,6 +1183,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -1065,6 +1211,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -1094,6 +1242,8 @@ export default function App() {
     setP4des1woodStatus(false);
     setP3des3urbanStatus(false);
     setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
 
     setShowP1(false);
   };
@@ -1192,6 +1342,9 @@ export default function App() {
             !p2_des1 &&
             !p1_des2 &&
             !p1_des1 &&
+            !p5des1desertStatus &&
+            !p5des1woodStatus &&
+            !p5des1urbanStatus &&
             !show4 &&
             !show3 &&
             !show2 &&
@@ -1201,6 +1354,9 @@ export default function App() {
             !woodP1 &&
             !urbanP1 &&
             !desertP1 &&
+            !p5des1desertStatus &&
+            !p5des1woodStatus &&
+            !p5des1urbanStatus &&
             !p3_des2 &&
             !p3_des1 &&
             !p2_des2 &&
@@ -1217,6 +1373,9 @@ export default function App() {
             !woodP1 &&
             !urbanP1 &&
             !desertP1 &&
+            !p5des1urbanStatus &&
+            !p5des1desertStatus &&
+            !p5des1woodStatus &&
             !p3_des2 &&
             !p3_des1 &&
             !p2_des2 &&
@@ -1496,6 +1655,7 @@ export default function App() {
             // <h4>sssss</h4>
           )}
           {p4des1woodStatus &&
+            !p5des1desertStatus &&
             !p3des3desertStatus &&
             !p3des3desertStatus &&
             !p3des3woodStatus &&
@@ -1507,6 +1667,7 @@ export default function App() {
             !p2_des1 && <img src={p4des1Bl} />}
 
           {p4des1desertStatus &&
+            !p5des1desertStatus &&
             !p4des1woodStatus &&
             !p3des3desertStatus &&
             !p3des3desertStatus &&
@@ -1520,6 +1681,8 @@ export default function App() {
 
           {p4des1urbanStatus &&
             !p4des1desertStatus &&
+            !p5des1desertStatus &&
+            !p5des1urbanStatus &&
             !p4des1woodStatus &&
             !p3des3desertStatus &&
             !p3des3desertStatus &&
@@ -1548,9 +1711,40 @@ export default function App() {
             !p1des1woodStatus &&
             !p2des2woodStatus &&
             !p2_des1 &&
-            !p2_des2 && (
-              <img src={p5des1Bl} />
-            )}
+            !p2_des2 && <img src={p5des1Bl} />}
+          {p5des1desertStatus &&
+            !p5des1woodStatus &&
+            !p4des1urbanStatus &&
+            !p4des1desertStatus &&
+            !p4des1woodStatus &&
+            !p3des3desertStatus &&
+            !p3des3woodStatus &&
+            !p3des3urbanStatus &&
+            !p2des2urbanStatus &&
+            !p2des2woodStatus &&
+            !p2des2desertStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p1des1woodStatus &&
+            !p2_des1 &&
+            !p2_des2 && <img src={p5des1De} />}
+          {p5des1urbanStatus &&
+            !p5des1woodStatus &&
+            !p5des1desertStatus &&
+            !p4des1urbanStatus &&
+            !p4des1desertStatus &&
+            !p4des1woodStatus &&
+            !p3des3desertStatus &&
+            !p3des3woodStatus &&
+            !p3des3urbanStatus &&
+            !p2des2urbanStatus &&
+            !p2des2woodStatus &&
+            !p2des2desertStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p1des1woodStatus &&
+            !p2_des1 &&
+            !p2_des2 && <img src={p5des1Ur} />}
         </div>
         <div style={{ paddingTop: 20 }}>
           <button style={{ padding: 10, fontSize: 16 }} onClick={startOver}>
@@ -1831,14 +2025,14 @@ export default function App() {
                     <h6 className="text-center mt-3">Woodland</h6>
                   </div>
 
-                  {/* <div className="imgCard" onClick={setP2Desert}>
+                  <div className="imgCard" onClick={setP5des1Desert}>
                     <img src={desert} />
                     <h6 className="text-center mt-3"> Desert</h6>
                   </div>
-                  <div className="imgCard" onClick={setP2Urabn}>
+                  <div className="imgCard" onClick={setP5des1Urabn}>
                     <img src={urban} />
                     <h6 className="text-center mt-3"> Urban</h6>
-                  </div> */}
+                  </div>
                 </div>
               )}
             {penType2 &&
