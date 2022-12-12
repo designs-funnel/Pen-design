@@ -28,7 +28,15 @@ import urban from "./assets/urban.png";
 import p1w from "./assets/p1w.png";
 import p1desert from "./assets/p1desert.png";
 import p1u from "./assets/p1u.png";
-
+import p2w from "./assets/p2w.png";
+import p2desert from "./assets/p2desert.png";
+import p2u from "./assets/p2u.png";
+import p3w from "./assets/p3w.png";
+import p3desert from "./assets/p3desert.png";
+import p3u from "./assets/p3u.png";
+import p1des1Bl from "./assets/p1des1Bl.png";
+import p1des1De from "./assets/p1des1De.png";
+import p1des1Ur from "./assets/p1des1Ur.png";
 import { Animated } from "react-animated-css";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
@@ -50,12 +58,46 @@ export default function App() {
   const [penType2, setPenType2] = useState(false);
   const [penType3, setPenType3] = useState(false);
   const [woodP1, setWoodP1] = useState(false);
+  const [p1des1wood, setP1des1wood] = useState(false);
+  const [p1des1woodStatus, setP1des1woodStatus] = useState(false);
+  const [p2des2woodStatus, setP2des2woodStatus] = useState(false);
+  const [p2des2desertStatus, setP2des2desertStatus] = useState(false);
+  const [p2des2urbanStatus, setP2des2urbanStatus] = useState(false);
+  const [p3des3woodStatus, setP3des3woodStatus] = useState(false);
+
+  const [p1des1desertStatus, setP1des1desertStatus] = useState(false);
+  const [p1des1urbanStatus, setP1des1urbanStatus] = useState(false);
+
+  const [woodP2, setWoodP2] = useState(false);
+  const [woodP3, setWoodP3] = useState(false);
   const [desertP1, setDesertP1] = useState(false);
+  const [desertP2, setDesertP2] = useState(false);
+  const [desertP3, setDesertP3] = useState(false);
+
   const [urbanP1, setUrbanP1] = useState(false);
+  const [urbanP2, setUrbanP2] = useState(false);
+  const [urbanP3, setUrbanP3] = useState(false);
+
   const setpen1 = () => {
     // setShow1(!show1);
     setPenType1(true);
     setShow2(true);
+    setP1des1woodStatus(false);
+    setP2des2woodStatus(false);
+    setP1des1desertStatus(false);
+    setShow1(false);
+    setShow3(false);
+    setShow4(false);
+    setPenType2(false);
+    setPenType3(false);
+  };
+
+  const setpen1des = () => {
+    // setShow1(!show1);
+    setPenType1(true);
+    setShow2(true);
+    setP1des1woodStatus(false);
+    setP2des2woodStatus(true);
     setShow1(false);
     setShow3(false);
     setShow4(false);
@@ -64,6 +106,8 @@ export default function App() {
   };
   const setpen2 = () => {
     setPenType2(true);
+    setP1des1woodStatus(false);
+
     setShow3(true);
     setShow1(false);
     setShow2(false);
@@ -73,6 +117,7 @@ export default function App() {
   };
   const setpen3 = () => {
     setPenType3(true);
+    setP1des1woodStatus(false);
     setShow4(true);
     setShow3(false);
     setShow2(false);
@@ -88,8 +133,9 @@ export default function App() {
   };
 
   const setdes1 = () => {
-    // setPenType1(true);
+    setPenType1(true);
     setP1_Des1(true);
+    setP1des1woodStatus(true);
     setShow1(false);
     setShow4(false);
     setShow3(false);
@@ -99,6 +145,10 @@ export default function App() {
   const setdes2 = () => {
     setP1_Des2(true);
     setP1_Des1(false);
+    setP1des1woodStatus(false);
+    setP2des2woodStatus(false);
+    setP3des3woodStatus(true);
+
     setShow1(false);
     setShow4(false);
     setShow3(false);
@@ -157,6 +207,8 @@ export default function App() {
 
   const setP1wood = () => {
     setWoodP1(true);
+    setPenType1(true);
+    setP1_Des1(true);
     setDesertP1(false);
     setUrbanP1(false);
     setP3_Des2(false);
@@ -171,9 +223,279 @@ export default function App() {
     setShow2(false);
     setShowP1(false);
   };
+
+  const setP1des1Wood = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(true);
+    setP1des1urbanStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+
+    setPenType1(true);
+    setP1_Des1(false);
+    // setPenType1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP1des1Desert = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(true);
+    setP1des1desertStatus(true);
+    setP1des1urbanStatus(false);
+    setP2des2woodStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+    setPenType1(true);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP2des2Wood = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(true);
+    setP1des1urbanStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+
+    setPenType1(true);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP2des2Desert = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(false);
+    setP2des2desertStatus(true);
+    setP1des1urbanStatus(false);
+    setP2des2urbanStatus(false);
+
+    setPenType1(true);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP2des2Urabn = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP1des1desertStatus(false);
+    setP2des2woodStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(true);
+    setP1des1urbanStatus(false);
+    setPenType1(true);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+  const setP1des1Urabn = () => {
+    setP1des1wood(false);
+    setP1des1woodStatus(true);
+    setP1des1desertStatus(false);
+    setP1des1urbanStatus(true);
+    setPenType1(true);
+    setP1_Des1(false);
+    setWoodP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+  const setP2wood = () => {
+    setWoodP2(true);
+    setWoodP1(false);
+    setDesertP1(false);
+    setUrbanP1(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP3wood = () => {
+    setWoodP3(true);
+    setWoodP2(false);
+    setWoodP1(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
   const setP1Desert = () => {
     setDesertP1(true);
+    setDesertP2(false);
     setWoodP1(false);
+    setWoodP2(false);
+    setUrbanP1(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP2Desert = () => {
+    setDesertP2(true);
+    setDesertP1(false);
+    setWoodP2(false);
+    setWoodP1(false);
+    setUrbanP1(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP3Desert = () => {
+    setDesertP3(true);
+    setDesertP2(false);
+    setDesertP1(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setWoodP1(false);
+    setUrbanP1(false);
+    setUrbanP3(false);
     setUrbanP1(false);
     setP3_Des2(false);
     setP3_Des1(false);
@@ -190,6 +512,52 @@ export default function App() {
   const setP1Urabn = () => {
     setUrbanP1(true);
     setDesertP1(false);
+    setDesertP2(false);
+    setWoodP2(false);
+    setUrbanP2(false);
+    setWoodP1(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP2Urabn = () => {
+    setUrbanP2(true);
+    setUrbanP1(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setWoodP2(false);
+    setWoodP1(false);
+    setP3_Des2(false);
+    setP3_Des1(false);
+    setP2_Des2(false);
+    setP2_Des1(false);
+    setP1_Des2(false);
+    setP1_Des1(false);
+    setShow1(false);
+    setShow4(false);
+    setShow3(false);
+    setShow2(false);
+    setShowP1(false);
+  };
+
+  const setP3Urabn = () => {
+    setUrbanP3(true);
+    setUrbanP2(false);
+    setUrbanP1(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setWoodP3(false);
+    setWoodP2(false);
     setWoodP1(false);
     setP3_Des2(false);
     setP3_Des1(false);
@@ -288,6 +656,272 @@ export default function App() {
             !show3 &&
             !show2 &&
             !show1 && <img src={p1u} />}
+          {woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !desertP1 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p2w} />}
+          {desertP2 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !desertP1 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p2desert} />}
+          {urbanP2 &&
+            !desertP2 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !desertP1 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p2u} />}
+          {woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p3w} />}
+          {desertP3 &&
+            !woodP3 &&
+            !woodP3 &&
+            !desertP2 &&
+            !woodP2 &&
+            !woodP3 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p3desert} />}
+          {urbanP3 &&
+            !urbanP2 &&
+            !urbanP1 &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p3u} />}
+          {p1des1woodStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p2des2woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1des1Bl} />}
+          {p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p2des2woodStatus &&
+            // !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1des1De} />}
+          {p1des1urbanStatus &&
+            !p1des1desertStatus &&
+            !p2des2woodStatus &&
+            // !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1des1Ur} />}
+          {p2des2woodStatus &&
+            !p1des1desertStatus &&
+            !p2des2woodStatus &&
+            // !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1des1Ur} />}
+          {p2des2woodStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1w} />}
+          {p2des2desertStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1desert} />}
+          {p2des2urbanStatus &&
+            !p1des1desertStatus &&
+            !p1des1urbanStatus &&
+            !p1des1woodStatus &&
+            !woodP3 &&
+            !woodP2 &&
+            !woodP1 &&
+            !urbanP1 &&
+            !urbanP2 &&
+            !urbanP3 &&
+            !desertP1 &&
+            !desertP2 &&
+            !desertP3 &&
+            !p3_des2 &&
+            !p3_des1 &&
+            !p2_des2 &&
+            !p2_des1 &&
+            !p1_des2 &&
+            !p1_des1 &&
+            !show4 &&
+            !show3 &&
+            !show2 &&
+            !show1 && <img src={p1u} />}
         </div>
         <div style={{ paddingTop: 20 }}>
           <button style={{ padding: 10, fontSize: 16 }} onClick={startOver}>
@@ -354,7 +988,7 @@ export default function App() {
                   </h6>
                 </div>
 
-                <div className="imgCard2" onClick={setpen1}>
+                <div className="imgCard2" onClick={setpen1des}>
                   <img src={p1d2} />
                   <h6 className="text-center mt-3">
                     {" "}
@@ -434,21 +1068,109 @@ export default function App() {
               </div>
             }
           >
-            <div className="d-flex">
-              <div className="imgCard" onClick={setP1wood}>
-                <img src={woodland} />
-                <h6 className="text-center mt-3">Woodland</h6>
-              </div>
+            {penType1 &&
+              !p1des1woodStatus &&
+              !p1des1desertStatus &&
+              !p2des2woodStatus &&
+              !p3des3woodStatus && (
+                // !p1_des1 &&
+                // !p2_des1 &&
+                // !p2_des2 &&
+                // !p3_des1 &&
+                // !p3_des2 &&
+                <div className="d-flex">
+                  <div className="imgCard" onClick={setP1wood}>
+                    <img src={woodland} />
+                    <h6 className="text-center mt-3">Woodland</h6>
+                  </div>
 
-              <div className="imgCard" onClick={setP1Desert}>
-                <img src={desert} />
-                <h6 className="text-center mt-3"> Desert</h6>
+                  <div className="imgCard" onClick={setP1Desert}>
+                    <img src={desert} />
+                    <h6 className="text-center mt-3"> Desert</h6>
+                  </div>
+                  <div className="imgCard" onClick={setP1Urabn}>
+                    <img src={urban} />
+                    <h6 className="text-center mt-3"> Urban</h6>
+                  </div>
+                </div>
+              )}
+            {p1des1woodStatus &&
+              !p2des2woodStatus &&
+              !show1 &&
+              !show2 &&
+              !show3 && (
+                // && !penType2 && !penType3 &&
+                //  && p1des1woodStatus
+                <div className="d-flex">
+                  <div className="imgCard" onClick={setP1des1Wood}>
+                    <img src={woodland} />
+                    <h6 className="text-center mt-3">Woodland</h6>
+                  </div>
+
+                  <div className="imgCard" onClick={setP1des1Desert}>
+                    <img src={desert} />
+                    <h6 className="text-center mt-3"> Desert</h6>
+                  </div>
+                  <div className="imgCard" onClick={setP1des1Urabn}>
+                    <img src={urban} />
+                    <h6 className="text-center mt-3">Urban</h6>
+                  </div>
+                </div>
+              )}
+            {p2des2woodStatus && !p1des1woodStatus && !show1 && !show3 && (
+              // && !penType2 && !penType3 &&
+              //  && p1des1woodStatus
+              <div className="d-flex">
+                <div className="imgCard" onClick={setP2des2Wood}>
+                  <img src={woodland} />
+                  <h6 className="text-center mt-3">Woodland</h6>
+                </div>
+
+                <div className="imgCard" onClick={setP2des2Desert}>
+                  <img src={desert} />
+                  <h6 className="text-center mt-3"> Desert</h6>
+                </div>
+                <div className="imgCard" onClick={setP2des2Urabn}>
+                  <img src={urban} />
+                  <h6 className="text-center mt-3"> Urban</h6>
+                </div>
               </div>
-              <div className="imgCard" onClick={setP1Urabn}>
-                <img src={urban} />
-                <h6 className="text-center mt-3"> Urban</h6>
+            )}
+    
+            {penType2 && (
+              <div className="d-flex">
+                <div className="imgCard" onClick={setP2wood}>
+                  <img src={woodland} />
+                  <h6 className="text-center mt-3">Woodland</h6>
+                </div>
+
+                <div className="imgCard" onClick={setP2Desert}>
+                  <img src={desert} />
+                  <h6 className="text-center mt-3"> Desert</h6>
+                </div>
+                <div className="imgCard" onClick={setP2Urabn}>
+                  <img src={urban} />
+                  <h6 className="text-center mt-3"> Urban</h6>
+                </div>
               </div>
-            </div>
+            )}
+            {penType3 && (
+              <div className="d-flex">
+                <div className="imgCard" onClick={setP3wood}>
+                  <img src={woodland} />
+                  <h6 className="text-center mt-3">Woodland</h6>
+                </div>
+
+                <div className="imgCard" onClick={setP3Desert}>
+                  <img src={desert} />
+                  <h6 className="text-center mt-3"> Desert</h6>
+                </div>
+                <div className="imgCard" onClick={setP3Urabn}>
+                  <img src={urban} />
+                  <h6 className="text-center mt-3"> Urban</h6>
+                </div>
+              </div>
+            )}
           </Tab>
           <Tab
             eventKey="contact"
