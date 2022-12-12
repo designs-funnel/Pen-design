@@ -85,6 +85,8 @@ export default function App() {
     setP1des1woodStatus(false);
     setP2des2woodStatus(false);
     setP1des1desertStatus(false);
+    setP3des3woodStatus(false);
+    
     setShow1(false);
     setShow3(false);
     setShow4(false);
@@ -98,6 +100,8 @@ export default function App() {
     setShow2(true);
     setP1des1woodStatus(false);
     setP2des2woodStatus(true);
+    setP3des3woodStatus(false);
+
     setShow1(false);
     setShow3(false);
     setShow4(false);
@@ -136,6 +140,8 @@ export default function App() {
     setPenType1(true);
     setP1_Des1(true);
     setP1des1woodStatus(true);
+    setP2des2woodStatus(false);
+    setP3des3woodStatus(false);
     setShow1(false);
     setShow4(false);
     setShow3(false);
@@ -1136,7 +1142,7 @@ export default function App() {
                 </div>
               </div>
             )}
-    
+
             {penType2 && (
               <div className="d-flex">
                 <div className="imgCard" onClick={setP2wood}>
