@@ -96,7 +96,8 @@ export default function App() {
   const [p7des1woodStatus, setP7des1woodStatus] = useState(false);
   const [p7des1desertStatus, setP7des1desertStatus] = useState(false);
   const [p7des1urbanStatus, setP7des1urbanStatus] = useState(false);
-
+  const [disabled2, setDisabled2] = useState(false);
+  const [disabled3, setDisabled3] = useState(false);
   const [woodP2, setWoodP2] = useState(false);
   const [woodP3, setWoodP3] = useState(false);
   const [desertP1, setDesertP1] = useState(false);
@@ -107,6 +108,55 @@ export default function App() {
   const [urbanP2, setUrbanP2] = useState(false);
   const [urbanP3, setUrbanP3] = useState(false);
 
+  const startOver = () => {
+    setShow1(true);
+    setShow2(false);
+    setShow3(false);
+    setShow4(false);
+    setShowP1(false);
+    setP1_Des1(false);
+    setP1_Des2(false);
+    setP2_Des1(false);
+    setP2_Des2(false);
+    setP3_Des1(false);
+    setP3_Des2(false);
+    setPenType1(false);
+    setPenType2(false);
+    setPenType3(false);
+    setWoodP1(false);
+    setP1des1wood(false);
+    setP1des1woodStatus(false);
+    setP2des2woodStatus(false);
+    setP1des1desertStatus(false);
+    setP1des1urbanStatus(false);
+    setP2des2desertStatus(false);
+    setP2des2urbanStatus(false);
+    setP3des3woodStatus(false);
+    setP3des3desertStatus(false);
+    setP3des3urbanStatus(false);
+    setP4des1woodStatus(false);
+    setP4des1woodStatus(false);
+    setP4des1urbanStatus(false);
+    setP5des1woodStatus(false);
+    setP5des1desertStatus(false);
+    setP5des1urbanStatus(false);
+    setP6des1woodStatus(false);
+    setP6des1desertStatus(false);
+    setP6des1urbanStatus(false);
+    setP7des1woodStatus(false);
+    setP7des1desertStatus(false);
+    setP7des1urbanStatus(false);
+    setWoodP2(false);
+    setWoodP3(false);
+    setDesertP1(false);
+    setDesertP2(false);
+    setDesertP3(false);
+    setUrbanP1(false);
+    setUrbanP2(false);
+    setUrbanP3(false);
+    setDisabled2(true);
+    setDisabled3(true);
+  };
   const setpen1 = () => {
     // setShow1(!show1);
     setPenType1(true);
@@ -129,12 +179,13 @@ export default function App() {
     setP6des1urbanStatus(false);
     setP7des1desertStatus(false);
     setP7des1urbanStatus(false);
-
     setShow1(false);
     setShow3(false);
     setShow4(false);
     setPenType2(false);
     setPenType3(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setpen1des = () => {
@@ -158,12 +209,13 @@ export default function App() {
     setP6des1urbanStatus(false);
     setP7des1desertStatus(false);
     setP7des1urbanStatus(false);
-
     setShow1(false);
     setShow3(false);
     setShow4(false);
     setPenType2(false);
     setPenType3(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setpen2 = () => {
     setPenType2(true);
@@ -196,6 +248,8 @@ export default function App() {
     setShow4(false);
     setPenType1(false);
     setPenType3(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setpen3 = () => {
     setPenType3(true);
@@ -227,29 +281,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setPenType2(false);
-  };
-  const startOver = () => {
-    setShow1(true);
-    setShow4(false);
-    setShow3(false);
-    setShow2(false);
-    setP1des1woodStatus(false);
-    setP2des2woodStatus(false);
-    setP3des3woodStatus(false);
-    setP3des3urbanStatus(false);
-    setP3des3desertStatus(false);
-    setP4des1woodStatus(false);
-    setP4des1desertStatus(false);
-    setP4des1urbanStatus(false);
-    setP5des1woodStatus(false);
-    setP5des1urbanStatus(false);
-    setP5des1desertStatus(false);
-    setP6des1desertStatus(false);
-    setP6des1woodStatus(false);
-    setP6des1urbanStatus(false);
-    setP7des1woodStatus(false);
-    setP7des1desertStatus(false);
-    setP7des1urbanStatus(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setdes1 = () => {
@@ -308,6 +341,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setp2des1 = () => {
@@ -338,6 +373,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setp2des2 = () => {
@@ -369,6 +406,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setp3des1 = () => {
@@ -401,6 +440,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setp3des2 = () => {
     setP7des1woodStatus(true);
@@ -433,6 +474,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP1wood = () => {
@@ -470,6 +513,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP1des1Wood = () => {
@@ -518,6 +563,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP1des1Desert = () => {
@@ -565,6 +612,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP2des2Wood = () => {
@@ -612,6 +661,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP3des3Wood = () => {
@@ -659,6 +710,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP4des1Wood = () => {
@@ -708,6 +761,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP5des1Wood = () => {
@@ -754,6 +809,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP6des1Wood = () => {
@@ -803,6 +860,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP7des1Wood = () => {
     setP7des1woodStatus(true);
@@ -848,6 +907,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP7des1Desert = () => {
@@ -895,6 +956,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP7des1Urabn = () => {
@@ -942,6 +1005,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP6des1Desert = () => {
     setP6des1desertStatus(true);
@@ -986,6 +1051,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP6des1Urabn = () => {
@@ -1032,6 +1099,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP5des1Desert = () => {
     setP5des1desertStatus(true);
@@ -1077,6 +1146,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP5des1Urabn = () => {
@@ -1124,6 +1195,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP4des1Desert = () => {
     setP4des1desertStatus(true);
@@ -1168,6 +1241,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP4des4Urabn = () => {
@@ -1214,6 +1289,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP3des3Desert = () => {
     setP3des3desertStatus(true);
@@ -1258,6 +1335,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
     // setP1des1wood(false);
     // setP1des1woodStatus(false);
     // setP1des1desertStatus(false);
@@ -1336,6 +1415,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
     // setP3des3desertStatus(false);
     // setP3des3woodStatus(false);
     // setP1des1wood(false);
@@ -1420,6 +1501,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP2des2Urabn = () => {
     setP1des1wood(false);
@@ -1463,6 +1546,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP1des1Urabn = () => {
     setP1des1wood(false);
@@ -1505,6 +1590,8 @@ export default function App() {
     setShow3(false);
     setShow2(false);
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP2wood = () => {
     setWoodP2(true);
@@ -1537,6 +1624,8 @@ export default function App() {
     setP7des1woodStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP3wood = () => {
@@ -1576,6 +1665,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP1Desert = () => {
     setDesertP1(true);
@@ -1609,6 +1700,8 @@ export default function App() {
     setP7des1woodStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP2Desert = () => {
@@ -1644,6 +1737,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP3Desert = () => {
@@ -1683,6 +1778,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   const setP1Urabn = () => {
     setUrbanP1(true);
@@ -1718,6 +1815,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP2Urabn = () => {
@@ -1754,6 +1853,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
 
   const setP3Urabn = () => {
@@ -1793,6 +1894,8 @@ export default function App() {
     setP7des1urbanStatus(false);
 
     setShowP1(false);
+    setDisabled2(false);
+    setDisabled3(false);
   };
   return (
     <div>
@@ -2008,9 +2111,7 @@ export default function App() {
             !p7des1urbanStatus &&
             !p7des1desertStatus &&
             !p6des1woodStatus &&
-            !p6des1desertStatus && 
-            <img src={p3w} />
-            }
+            !p6des1desertStatus && <img src={p3w} />}
           {desertP3 &&
             !woodP3 &&
             !woodP3 &&
@@ -2620,6 +2721,7 @@ export default function App() {
           </Tab>
 
           <Tab
+            disabled={disabled2}
             eventKey="longer-tab"
             title={
               <div>
@@ -2710,6 +2812,7 @@ export default function App() {
           </Tab>
           <Tab
             eventKey="profile"
+            disabled={disabled3}
             title={
               <div>
                 <h6 className="tabHead" style={{ textAlign: "start" }}>
